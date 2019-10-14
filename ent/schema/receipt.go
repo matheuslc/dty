@@ -2,6 +2,7 @@ package schema
 
 import (
 	"github.com/facebookincubator/ent"
+	"github.com/facebookincubator/ent/schema/edge"
 	"github.com/facebookincubator/ent/schema/field"
 )
 
@@ -21,7 +22,7 @@ func (Receipt) Fields() []ent.Field {
 // Edges of the Receipt.
 func (Receipt) Edges() []ent.Edge {
 	return []ent.Edge{
-		edge.To("ingredients", Ingredient.type),
-		edge.To("directions", Direction.type)
+		edge.To("ingredients", Ingredient.Type),
+		edge.To("directions", Direction.Type),
 	}
 }
